@@ -4,12 +4,20 @@
 class CollisionsManager
 {
 public:
-	CollisionsManager(void);
+	CollisionsManager();
 
 	~CollisionsManager(void);
 
-	void playerCollisions(sf::RectangleShape rectangle, sf::CircleShape circle, sf::Vector2f ballSpeed);
+	static void playerCollisions(sf::RectangleShape rectangle, sf::CircleShape circle, sf::Vector2f ballSpeed);
 
-	void wallCollisions();
+//	void wallCollisions();
+
+private:
+
+	sf::RectangleShape rectangle;
+
+	sf::CircleShape circle;
+
+	sf::Vector2f ballSpeed;
 };
 

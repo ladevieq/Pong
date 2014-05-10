@@ -1,6 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "CollisionsManager.h"
+#include <iostream>
 
 class Game
 {
@@ -20,9 +21,9 @@ public:
 
 private: 
 
-	sf::RenderWindow window;
-	sf::CircleShape ball;
+	sf::CircleShape ball ;
 	sf::RectangleShape joueur_1;
+	sf::RenderWindow window;
 		
 	sf::Vector2i mousePos;
 	int mouseX ;
