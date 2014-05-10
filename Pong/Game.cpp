@@ -59,10 +59,6 @@ void Game::Event()
 
 void Game::createScene()
 {
-	sf::Vector2i mousePos = sf::Mouse::getPosition(window);
-	int mouseX = mousePos.x;
-	int mouseY = mousePos.y;
-
 	if (mouseY > 650)
 	{
 		mouseY = 650;
@@ -88,15 +84,11 @@ void Game::createScene()
 	bord_droite.setPosition(999, 0);
 	window.draw(bord_droite);
 
-	sf::RectangleShape joueur_1(sf::Vector2f(10, 150));
 	joueur_1.setPosition(50, mouseY);
 	sf::RectangleShape joueur_2(sf::Vector2f(10, 150));
 	joueur_2.setPosition(950, 350);
 	sf::RectangleShape filet (sf::Vector2f(20, 800));
 	filet.setPosition(490, 0);
-	sf::CircleShape ball (12);
-	ball.setPosition(60, 475);
-	ball.setFillColor(sf::Color(255, 255, 0));
 
 	window.draw(ball);
 	window.draw(filet);
